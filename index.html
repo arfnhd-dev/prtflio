@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Arief</title>
+  <meta name="description" content="Portofolio profesional dengan efek parallax." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --brand:#0ea5e9;         /* biru branding */
+      --brand-dark:#0369a1;    /* biru gelap */
+      --text:#0f172a;          /* slate-900 */
+      --muted:#64748b;         /* slate-500 */
+      --bg:#ffffff;
+      --maxw:1120px;
+    }
+    *{ box-sizing:border-box }
+    html{ scroll-behavior:smooth }
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+      color:var(--text); background:var(--bg);
+    }
+    /* Header / Navbar */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(150%) blur(8px);
+      background:rgba(255,255,255,.8);
+      border-bottom:1px solid rgba(2,6,23,.08);
+    }
+    .nav-inner{
+      max-width:var(--maxw); margin:auto; padding:.75rem 1rem;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{ font-weight:800; letter-spacing:.2px; color:var(--brand-dark) }
+    .menu{ display:flex; gap:1rem; }
+    .menu a{
+      color:var(--text); text-decoration:none; font-weight:600; padding:.5rem .75rem; border-radius:.5rem;
+    }
+    .menu a:hover{ background:rgba(14,165,233,.12); color:var(--brand-dark) }
+
+    /* Hero Parallax */
+    .parallax{
+      position:relative; min-height:78vh; display:flex; align-items:center; justify-content:center;
+      color:#fff; text-align:center; isolation:isolate;
+      background-size:cover; background-position:center; background-repeat:no-repeat; background-attachment:fixed;
+    }
+    .parallax::after{
+      content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.35));
+      z-index:0;
+    }
+    .hero-content{ position:relative; z-index:1; padding:2rem; }
+    .eyebrow{ text-transform:uppercase; letter-spacing:.18em; font-weight:700; color:#cfeaff; }
+    .title{ font-size:clamp(2rem,6vw,4rem); font-weight:800; margin:.4rem 0 1rem; }
+    .subtitle{ max-width:720px; margin:auto; color:#e2e8f0 }
+
+    /* Sections */
+    section{ padding:4rem 1rem }
+    .container{ max-width:var(--maxw); margin:auto }
+    .grid{
+      display:grid; gap:1.25rem;
+      grid-template-columns:repeat(12,1fr);
+    }
+    .card{
+      grid-column:span 4; background:#fff; border:1px solid rgba(2,6,23,.08);
+      border-radius:1rem; padding:1rem; box-shadow:0 10px 24px rgba(2,6,23,.06);
+    }
+    .card h3{ margin:.25rem 0 .5rem; font-size:1.1rem }
+    .muted{ color:var(--muted) }
+    .badge{
+      display:inline-block; padding:.25rem .5rem; border-radius:.5rem;
+      background:rgba(14,165,233,.12); color:var(--brand-dark); font-weight:700; font-size:.8rem;
+    }
+    .btn{
+      display:inline-block; padding:.75rem 1rem; border-radius:.75rem; font-weight:700;
+      background:var(--brand); color:#fff; text-decoration:none;
+      box-shadow:0 8px 20px rgba(14,165,233,.35);
+    }
+    .btn:hover{ background:var(--brand-dark) }
+
+    /* Second Parallax banner */
+    .parallax.alt{
+      min-height:52vh;
+      background-attachment:fixed;
+    }
+
+    /* Footer */
+    footer{ padding:2rem 1rem; border-top:1px solid rgba(2,6,23,.08); color:var(--muted) }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .card{ grid-column:span 6 }
+    }
+    @media (max-width:640px){
+      .menu{ gap:.5rem; flex-wrap:wrap }
+      .card{ grid-column:span 12 }
+      .parallax{ background-attachment:scroll } /* fallback untuk iOS */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Arief</div>
+      <div class="menu">
+        <a href="#about">Tentang</a>
+        <a href="#work">Karya</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Parallax -->
+  <header
+    class="parallax"
+    style="background-image:url('https://images.unsplash.com/photo-1526378722484-baf93063a618?q=80&w=1600&auto=format&fit=crop');">
+    <div class="hero-content">
+      <div class="eyebrow">Technical architect & instructor</div>
+      <h1 class="title">Membangun sistem yang elegan, aman, dan terukur</h1>
+      <p class="subtitle">Portofolio proyek, tulisan, dan materi workshop tentang infrastruktur web, optimasi query, dan dashboard yang profesional.</p>
+      <div style="margin-top:1.5rem">
+        <a class="btn" href="#work">Lihat Karya</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 style="margin:0 0 1rem">Tentang saya</h2>
+      <p class="muted" style="max-width:720px">
+        Saya merancang arsitektur aplikasi dengan fokus pada maintainability, keamanan, dan kejelasan. Saya juga mengajar workshop
+        tentang infrastruktur web, rekapitulasi data, dan visualisasi yang selaras dengan branding.
+      </p>
+      <div class="grid" style="margin-top:1.25rem">
+        <div class="card">
+          <span class="badge">Backend</span>
+          <h3>Optimasi query & transaksi</h3>
+          <p class="muted">Grouping, indeks, dan keamanan transaksi untuk rekapitulasi yang akurat dan hemat biaya.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Frontend</span>
+          <h3>Dashboard profesional</h3>
+          <p class="muted">UI responsif dengan tabel DataTables dan Chart.js, selaras dengan identitas merek.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Instructional</span>
+          <h3>Diagram & SOP</h3>
+          <p class="muted">Materi demo-ready, alur kerja yang jelas, dan onboarding tim yang efektif.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Banner -->
+  <div
+    class="parallax alt"
+    style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');">
+    <div class="hero-content">
+      <h2 class="title" style="font-size:clamp(1.6rem,4.5vw,2.8rem)">Misi: kejelasan, keamanan, dan skalabilitas</h2>
+      <p class="subtitle">Sistem yang indah bukan hanya tampilannya—ia juga kuat, aman, dan mudah dirawat.</p>
+    </div>
+  </div>
+
+  <!-- Work -->
+  <section id="work">
+    <div class="container">
+      <h2 style="margin:0 0 1rem">Karya pilihan</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Rekapitulasi Transaksi</h3>
+          <p class="muted">Optimasi query agregasi bulanan dengan indeks komposit dan safety transaksi.</p>
+          <a class="btn" href="#" aria-label="Detail proyek rekapitulasi">Detail</a>
+        </div>
+        <div class="card">
+          <h3>Dashboard Branded</h3>
+          <p class="muted">Chart.js dengan palet warna resmi, legend rapi, dan tooltip informatif.</p>
+          <a class="btn" href="#" aria-label="Detail proyek dashboard">Detail</a>
+        </div>
+        <div class="card">
+          <h3>Workflow & SOP</h3>
+          <p class="muted">Diagram alur PO dan dokumentasi onboarding tim yang dapat diulang.</p>
+          <a class="btn" href="#" aria-label="Detail proyek SOP">Detail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 style="margin:0 0 1rem">Kontak</h2>
+      <p class="muted" style="max-width:720px">
+        Ingin berkolaborasi atau butuh workshop untuk tim? Saya terbuka untuk proyek yang mengutamakan kemantapan arsitektur dan presentasi profesional.
+      </p>
+      <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem">
+        <a class="btn" href="mailto:halo@example.com">Email</a>
+        <a class="btn" href="#" rel="noopener">LinkedIn</a>
+        <a class="btn" href="#" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2025 Arief — Dibangun dengan HTML/CSS. Gambar dari Unsplash (placeholder).
+    </div>
+  </footer>
+
+  <!-- Optional: kecilkan header saat scroll -->
+  <script>
+    const nav = document.querySelector('.nav');
+    let lastY = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      const shrink = y > 24;
+      nav.style.borderBottomColor = shrink ? 'rgba(2,6,23,.12)' : 'rgba(2,6,23,.08)';
+      lastY = y;
+    });
+  </script>
+</body>
+</html>
