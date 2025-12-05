@@ -6,6 +6,7 @@
   <title>Portofolio — Arief</title>
   <meta name="description" content="Portofolio profesional dengan efek parallax." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root{
       --brand:#0ea5e9;         /* biru branding */
@@ -28,9 +29,13 @@
       background:rgba(255,255,255,.8);
       border-bottom:1px solid rgba(2,6,23,.08);
     }
-    .nav-inner{
-      max-width:var(--maxw); margin:auto; padding:.75rem 1rem;
-      display:flex; align-items:center; justify-content:space-between;
+    .nav-inner {
+      max-width: var(--maxw);
+      margin: auto;
+      padding: .75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center; /* ubah dari space-between ke center */
     }
     .brand{ font-weight:800; letter-spacing:.2px; color:var(--brand-dark) }
     .menu{ display:flex; gap:1rem; }
@@ -103,11 +108,11 @@
   <!-- Navbar -->
   <nav class="nav">
     <div class="nav-inner">
-      <div class="brand">ARFNHD</div>
+      <!-- <div class="brand">ARFNHD</div> -->
       <div class="menu">
-        <a href="#about">Tentang</a>
-        <a href="#work">Karya</a>
-        <a href="#contact">Kontak</a>
+        <a href="#about">About Me</a>
+        <a href="#work">Project</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -115,11 +120,12 @@
   <!-- Hero Parallax -->
   <header
     class="parallax"
-    style="background-image:url('https://images.unsplash.com/photo-1526378722484-baf93063a618?q=80&w=1600&auto=format&fit=crop');">
+    style="background-image:url('assets/img/header.jpg');">
     <div class="hero-content">
-      <div class="eyebrow">Technical architect & instructor</div>
-      <h1 class="title">Membangun sistem yang elegan, aman, dan terukur</h1>
-      <p class="subtitle">Portofolio proyek, tulisan, dan materi workshop tentang infrastruktur web, optimasi query, dan dashboard yang profesional.</p>
+      <img src="assets/img/profile.png" alt="Logo ARFNHD" style="width:200px; height:auto; margin-bottom:5rem; border-radius: 50%;" />
+      <div class="eyebrow" style="margin-bottom: 2%;">System Administrator & Tech Enthusiast</div>
+      <!-- <h1 class="title">Membangun sistem yang elegan, aman, dan terukur</h1> -->
+      <p class="subtitle">Portofolio Project & Infrastruktur</p>
       <div style="margin-top:1.5rem">
         <a class="btn" href="#work">Lihat Karya</a>
       </div>
@@ -129,10 +135,9 @@
   <!-- About -->
   <section id="about">
     <div class="container">
-      <h2 style="margin:0 0 1rem">Tentang saya</h2>
+      <h2 style="margin:0 0 1rem">About Me</h2>
       <p class="muted" style="max-width:720px">
-        Saya merancang arsitektur aplikasi dengan fokus pada maintainability, keamanan, dan kejelasan. Saya juga mengajar workshop
-        tentang infrastruktur web, rekapitulasi data, dan visualisasi yang selaras dengan branding.
+        I am an IT Enthusiast who is currently working as a System Administrator, experienced in managing and optimizing DNS, Web, Cloud Storage, Mail, and Server Monitoring to support company operations.
       </p>
       <div class="grid" style="margin-top:1.25rem">
         <div class="card">
@@ -167,22 +172,22 @@
   <!-- Work -->
   <section id="work">
     <div class="container">
-      <h2 style="margin:0 0 1rem">Karya pilihan</h2>
+      <h2 style="margin:0 0 1rem">Project</h2>
       <div class="grid">
         <div class="card">
-          <h3>Rekapitulasi Transaksi</h3>
-          <p class="muted">Optimasi query agregasi bulanan dengan indeks komposit dan safety transaksi.</p>
-          <a class="btn" href="#" aria-label="Detail proyek rekapitulasi">Detail</a>
+          <h3>Network Monitoring System</h3>
+          <p class="muted">Create and Monitoring NMS Server to get information all servers</p>
+          <a class="btn" href="#" aria-label="Detail proyek rekapitulasi"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a>
         </div>
         <div class="card">
-          <h3>Dashboard Branded</h3>
-          <p class="muted">Chart.js dengan palet warna resmi, legend rapi, dan tooltip informatif.</p>
-          <a class="btn" href="#" aria-label="Detail proyek dashboard">Detail</a>
+          <h3>eLearning & Internal Web Apps</h3>
+          <p class="muted">Create and Monitoring internal and customer apps</p>
+          <a class="btn" href="#" aria-label="Detail proyek dashboard"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a>
         </div>
         <div class="card">
-          <h3>Workflow & SOP</h3>
+          <h3>Virtualization</h3>
           <p class="muted">Diagram alur PO dan dokumentasi onboarding tim yang dapat diulang.</p>
-          <a class="btn" href="#" aria-label="Detail proyek SOP">Detail</a>
+          <a class="btn" href="#" aria-label="Detail proyek SOP"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a>
         </div>
       </div>
     </div>
@@ -191,21 +196,21 @@
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2 style="margin:0 0 1rem">Kontak</h2>
+      <h2 style="margin:0 0 1rem">Contact</h2>
       <p class="muted" style="max-width:720px">
         Ingin berkolaborasi atau butuh workshop untuk tim? Saya terbuka untuk proyek yang mengutamakan kemantapan arsitektur dan presentasi profesional.
       </p>
       <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem">
-        <a class="btn" href="mailto:halo@example.com">Email</a>
-        <a class="btn" href="#" rel="noopener">LinkedIn</a>
-        <a class="btn" href="#" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:halo@example.com"><i class="fa-regular fa-envelope"></i>&nbspEmail</a>
+        <a class="btn" href="https://www.linkedin.com/in/arief-huda-578b8093/" rel="noopener"><i class="fa-brands fa-linkedin"></i>&nbspLinkedIn</a>
+        <a class="btn" href="#" rel="noopener"><i class="fa-brands fa-instagram"></i>&nbspInstagram</a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      © 2025 Arief — Dibangun dengan HTML/CSS. Gambar dari Unsplash (placeholder).
+      ARFNHD - 2025
     </div>
   </footer>
 
