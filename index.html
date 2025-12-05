@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portofolio — Arief</title>
+  <title>PORTOFOLIO — ARFNHD</title>
   <meta name="description" content="Portofolio profesional dengan efek parallax." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root{
-      --brand:#0ea5e9;         /* biru branding */
-      --brand-dark:#0369a1;    /* biru gelap */
-      --text:#0f172a;          /* slate-900 */
-      --muted:#64748b;         /* slate-500 */
+      --brand:#0ea5e9;    
+      --brand-dark:#0369a1;   
+      --text:#0f172a;          
+      --muted:#64748b;         
       --bg:#ffffff;
       --maxw:1120px;
     }
@@ -20,7 +20,16 @@
     html{ scroll-behavior:smooth }
     body{
       margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
-      color:var(--text); background:var(--bg);
+      color:var(--text); background:var(--bg); text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      font-style: italic;
+      color: #fff;
+      background: #6c757d;
+      border-radius: 0.375rem;
     }
     /* Header / Navbar */
     .nav{
@@ -55,7 +64,7 @@
       z-index:0;
     }
     .hero-content{ position:relative; z-index:1; padding:2rem; }
-    .eyebrow{ text-transform:uppercase; letter-spacing:.18em; font-weight:700; color:#cfeaff; }
+    .eyebrow{ text-transform:uppercase; letter-spacing:.18em; font-weight:800; color:#cfeaff; font-size: 28px; }
     .title{ font-size:clamp(2rem,6vw,4rem); font-weight:800; margin:.4rem 0 1rem; }
     .subtitle{ max-width:720px; margin:auto; color:#e2e8f0 }
 
@@ -71,7 +80,7 @@
       border-radius:1rem; padding:1rem; box-shadow:0 10px 24px rgba(2,6,23,.06);
     }
     .card h3{ margin:.25rem 0 .5rem; font-size:1.1rem }
-    .muted{ color:var(--muted) }
+    .muted{ color:var(--muted); line-height: 1.75; width: 100%; }
     .badge{
       display:inline-block; padding:.25rem .5rem; border-radius:.5rem;
       background:rgba(14,165,233,.12); color:var(--brand-dark); font-weight:700; font-size:.8rem;
@@ -110,9 +119,9 @@
     <div class="nav-inner">
       <!-- <div class="brand">ARFNHD</div> -->
       <div class="menu">
-        <a href="#about">About Me</a>
-        <a href="#work">Project</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">ABOUT ME</a>
+        <a href="#work">PROJECT</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </div>
   </nav>
@@ -122,12 +131,13 @@
     class="parallax"
     style="background-image:url('assets/img/header.jpg');">
     <div class="hero-content">
-      <img src="assets/img/profile.png" alt="Logo ARFNHD" style="width:200px; height:auto; margin-bottom:5rem; border-radius: 50%;" />
-      <div class="eyebrow" style="margin-bottom: 2%;">System Administrator & Tech Enthusiast</div>
+      <img src="assets/img/profile.png" alt="Logo ARFNHD" style="width:200px; height:auto; margin-bottom:3rem; border-radius: 50%;" />      
+      <div class="eyebrow" style="margin-bottom: 2%;">ARIEF NUR HUDA</div>
+      <p class="subtitle">System Administrator & Tech Enthusiast</p>
       <!-- <h1 class="title">Membangun sistem yang elegan, aman, dan terukur</h1> -->
-      <p class="subtitle">Portofolio Project & Infrastruktur</p>
+      <!-- <p class="subtitle">Portofolio Project & Infrastruktur</p> -->
       <div style="margin-top:1.5rem">
-        <a class="btn" href="#work">Lihat Karya</a>
+        <a class="btn" href="#work"><i class="fa-solid fa-list-check"></i>&nbspProject</a>
       </div>
     </div>
   </header>
@@ -135,27 +145,34 @@
   <!-- About -->
   <section id="about">
     <div class="container">
-      <h2 style="margin:0 0 1rem">About Me</h2>
-      <p class="muted" style="max-width:720px">
+      <h2 style="margin:0 0 1rem">ABOUT ME</h2>
+      <p class="muted">
         I am an IT Enthusiast who is currently working as a System Administrator, experienced in managing and optimizing DNS, Web, Cloud Storage, Mail, and Server Monitoring to support company operations.
       </p>
       <div class="grid" style="margin-top:1.25rem">
         <div class="card">
-          <span class="badge">Backend</span>
-          <h3>Optimasi query & transaksi</h3>
-          <p class="muted">Grouping, indeks, dan keamanan transaksi untuk rekapitulasi yang akurat dan hemat biaya.</p>
+          <span class="badge" style="margin-bottom: 2%;">Virtualization</span>
+          <h3>Hardware Virtualization</h3>
+          <p class="muted">
+            My work today is largely centered on hardware virtualization, driving efficiency and future‑ready scalability.
+          </p>
         </div>
         <div class="card">
-          <span class="badge">Frontend</span>
-          <h3>Dashboard profesional</h3>
-          <p class="muted">UI responsif dengan tabel DataTables dan Chart.js, selaras dengan identitas merek.</p>
+          <span class="badge" style="margin-bottom: 2%;">Fullstack Developer</span>
+          <h3>Web Development Projects</h3>
+          <p class="muted">
+            I have completed numerous web development tasks throughout my career, covering both frontend and backend solutions.
+          </p>
         </div>
         <div class="card">
-          <span class="badge">Instructional</span>
-          <h3>Diagram & SOP</h3>
-          <p class="muted">Materi demo-ready, alur kerja yang jelas, dan onboarding tim yang efektif.</p>
+          <span class="badge" style="margin-bottom: 2%;">Design</span>
+          <h3>Creative & IT Enthusiasm</h3>
+          <p class="muted">
+            I enjoy expressing design ideas and IT enthusiasm through Instagram microblog posts and creative content.
+          </p>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -164,30 +181,39 @@
     class="parallax alt"
     style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');">
     <div class="hero-content">
-      <h2 class="title" style="font-size:clamp(1.6rem,4.5vw,2.8rem)">Misi: kejelasan, keamanan, dan skalabilitas</h2>
-      <p class="subtitle">Sistem yang indah bukan hanya tampilannya—ia juga kuat, aman, dan mudah dirawat.</p>
+      <h2 class="title" style="font-size:clamp(1.6rem,4.5vw,2.8rem)">Mission: clarity, security, and scalability</h2>
+      <p class="subtitle">A beautiful system is not only about its appearance, it is also strong, secure, and easy to maintain.</p>
     </div>
   </div>
 
   <!-- Work -->
   <section id="work">
     <div class="container">
-      <h2 style="margin:0 0 1rem">Project</h2>
+      <h2 style="margin:0 0 1rem">PROJECT</h2>
+      <p class="muted">
+          Here are some of the projects I have worked on, showcasing my expertise in system administration, network monitoring, and internal application development.
+      </p>
       <div class="grid">
         <div class="card">
           <h3>Network Monitoring System</h3>
-          <p class="muted">Create and Monitoring NMS Server to get information all servers</p>
-          <a class="btn" href="#" aria-label="Detail proyek rekapitulasi"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a>
+          <img src="assets/img/nms.png" alt="NMS" style="width:100%; height:auto; border-radius: 0.5rem; margin-bottom: 1rem; margin-top: 1rem;">
+          <span class="badge">blurred for company privacy</span>
+          <p class="muted">Developed and monitored NMS servers to gather data across the entire server infrastructure.</p>
+          <!-- <a class="btn" href="#" aria-label="Detail proyek rekapitulasi"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a> -->
         </div>
         <div class="card">
           <h3>eLearning & Internal Web Apps</h3>
-          <p class="muted">Create and Monitoring internal and customer apps</p>
-          <a class="btn" href="#" aria-label="Detail proyek dashboard"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a>
+          <img src="assets/img/nms.png" alt="NMS" style="width:100%; height:auto; border-radius: 0.5rem; margin-bottom: 1rem; margin-top: 1rem;">
+          <span class="badge">blurred for company privacy</span>
+          <p class="muted">Developed and monitored internal apps and customer-facing applications.</p>          
+          <!-- <a class="btn" href="#" aria-label="Detail proyek dashboard"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a> -->
         </div>
         <div class="card">
           <h3>Virtualization</h3>
-          <p class="muted">Diagram alur PO dan dokumentasi onboarding tim yang dapat diulang.</p>
-          <a class="btn" href="#" aria-label="Detail proyek SOP"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a>
+          <img src="assets/img/virtualization.png" alt="NMS" style="width:100%; height:auto; border-radius: 0.5rem; margin-bottom: 1rem; margin-top: 1rem;">
+          <span class="badge">blurred for company privacy</span>
+          <p class="muted">Developed and optimized bare‑metal infrastructure enabling efficient, secure virtualization.</p>          
+          <!-- <a class="btn" href="#" aria-label="Detail proyek SOP"><i class="fa-solid fa-circle-info"></i>&nbspDetail</a> -->
         </div>
       </div>
     </div>
@@ -196,21 +222,28 @@
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2 style="margin:0 0 1rem">Contact</h2>
-      <p class="muted" style="max-width:720px">
-        Ingin berkolaborasi atau butuh workshop untuk tim? Saya terbuka untuk proyek yang mengutamakan kemantapan arsitektur dan presentasi profesional.
+      <h2 style="margin:0 0 1rem">CONTACT</h2>
+      <p class="muted">
+        I am very open to further discussions on technology and projects that prioritize robust architecture and forward‑looking development. Feel free to reach out to me through the following channels.
       </p>
-      <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem">
-        <a class="btn" href="mailto:halo@example.com"><i class="fa-regular fa-envelope"></i>&nbspEmail</a>
-        <a class="btn" href="https://www.linkedin.com/in/arief-huda-578b8093/" rel="noopener"><i class="fa-brands fa-linkedin"></i>&nbspLinkedIn</a>
-        <a class="btn" href="#" rel="noopener"><i class="fa-brands fa-instagram"></i>&nbspInstagram</a>
+      <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:2rem; 
+              justify-content:center; align-items:center;">
+          <a class="btn" href="mailto:halo@example.com">
+            <i class="fa-regular fa-envelope"></i>&nbspEmail
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/arief-huda-578b8093/" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>&nbspLinkedIn
+          </a>
+          <a class="btn" href="#" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>&nbspInstagram
+          </a>
+        </div>
       </div>
-    </div>
   </section>
 
   <footer>
     <div class="container">
-      ARFNHD - 2025
+      ARFNHD © 2025
     </div>
   </footer>
 
